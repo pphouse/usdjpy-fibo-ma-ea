@@ -1,1 +1,6 @@
 usd_jpy_M1/extracted/
+
+# Large OHLCV data files (can be regenerated from M1 data)
+h1_real_backtest/USDJPY_H1_*.csv
+m30_real_backtest/USDJPY_M30_*.csv
+m15_real_backtest/USDJPY_M15_*.csv

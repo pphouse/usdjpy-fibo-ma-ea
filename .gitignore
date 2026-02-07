@@ -4,3 +4,4 @@ usd_jpy_M1/extracted/
 h1_real_backtest/USDJPY_H1_*.csv
 m30_real_backtest/USDJPY_M30_*.csv
 m15_real_backtest/USDJPY_M15_*.csv
+m5_real_backtest/USDJPY_M5_*.csv

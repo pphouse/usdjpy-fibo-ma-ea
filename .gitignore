@@ -1,5 +1,12 @@
 usd_jpy_M1/extracted/
 
+# Multi-currency M1 data (download from Axiory)
+eur_jpy_M1/
+gbp_jpy_M1/
+aud_jpy_M1/
+eur_usd_M1/
+gbp_usd_M1/
+
 # Large OHLCV data files (can be regenerated from M1 data)
 h1_real_backtest/USDJPY_H1_*.csv
 m30_real_backtest/USDJPY_M30_*.csv

@@ -15,9 +15,11 @@ warnings.filterwarnings('ignore')
 plt.rcParams['axes.unicode_minus'] = False
 
 
+BASE_DIR = Path("/home/azureuser/usdjpy-fibo-ma-ea")
+
 CURRENCY_PAIRS = {
     'USDJPY': {
-        'path': Path("/Users/naoto/ドル円/usd_jpy_M1/extracted"),
+        'path': BASE_DIR / "usd_jpy_M1/extracted",
         'folder': 'USDJPY',
         'pip_value': 0.01,
         'type': 'JPY',
@@ -26,7 +28,7 @@ CURRENCY_PAIRS = {
         'buffer': 0.05,    # 5 pips
     },
     'EURJPY': {
-        'path': Path("/Users/naoto/ドル円/eur_jpy_M1/extracted"),
+        'path': BASE_DIR / "eur_jpy_M1/extracted",
         'folder': 'EURJPY',
         'pip_value': 0.01,
         'type': 'JPY',
@@ -35,7 +37,7 @@ CURRENCY_PAIRS = {
         'buffer': 0.05,
     },
     'GBPJPY': {
-        'path': Path("/Users/naoto/ドル円/gbp_jpy_M1/extracted"),
+        'path': BASE_DIR / "gbp_jpy_M1/extracted",
         'folder': 'GBPJPY',
         'pip_value': 0.01,
         'type': 'JPY',
@@ -44,7 +46,7 @@ CURRENCY_PAIRS = {
         'buffer': 0.08,
     },
     'AUDJPY': {
-        'path': Path("/Users/naoto/ドル円/aud_jpy_M1/extracted"),
+        'path': BASE_DIR / "aud_jpy_M1/extracted",
         'folder': 'AUDJPY',
         'pip_value': 0.01,
         'type': 'JPY',
@@ -53,7 +55,7 @@ CURRENCY_PAIRS = {
         'buffer': 0.04,
     },
     'EURUSD': {
-        'path': Path("/Users/naoto/ドル円/eur_usd_M1/extracted"),
+        'path': BASE_DIR / "eur_usd_M1/extracted",
         'folder': 'EURUSD',
         'pip_value': 0.0001,
         'type': 'USD',
@@ -62,7 +64,7 @@ CURRENCY_PAIRS = {
         'buffer': 0.0005,     # 5 pips
     },
     'GBPUSD': {
-        'path': Path("/Users/naoto/ドル円/gbp_usd_M1/extracted"),
+        'path': BASE_DIR / "gbp_usd_M1/extracted",
         'folder': 'GBPUSD',
         'pip_value': 0.0001,
         'type': 'USD',
@@ -415,13 +417,13 @@ def main():
             bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
 
     plt.tight_layout()
-    save_path = '/Users/naoto/ドル円/gogojungle_strategy/multi_currency_tokyo_v2.png'
+    save_path = str(BASE_DIR / 'gogojungle_strategy/multi_currency_tokyo_v2.png')
     plt.savefig(save_path, dpi=150, bbox_inches='tight')
     plt.close()
     print(f"\n保存: {save_path}")
 
     # CSV保存
-    csv_path = '/Users/naoto/ドル円/gogojungle_strategy/multi_currency_tokyo_v2.csv'
+    csv_path = str(BASE_DIR / 'gogojungle_strategy/multi_currency_tokyo_v2.csv')
     df_results.to_csv(csv_path, index=False)
     print(f"保存: {csv_path}")
 

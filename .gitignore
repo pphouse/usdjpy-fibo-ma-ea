@@ -1,4 +1,5 @@
-usd_jpy_M1/extracted/
+usd_jpy_M1/
+.venv/
 
 # Multi-currency M1 data (download from Axiory)
 eur_jpy_M1/
